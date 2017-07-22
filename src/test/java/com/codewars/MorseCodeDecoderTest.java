@@ -12,4 +12,9 @@ public class MorseCodeDecoderTest {
     public void testExampleFromDescription() {
         assertThat(MorseCodeDecoder.decode(".... . -.--   .--- ..- -.. ."), is("HEY JUDE"));
     }
+
+    @Test
+    public void testExampleWithBlankSpace() {
+        assertThat(MorseCodeDecoder.decode(" .... . -.--   .--- ..- -.. . "), is("HEY JUDE"));
+    }
 }
